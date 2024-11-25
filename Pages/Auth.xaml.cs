@@ -81,6 +81,7 @@ namespace PR6_Lashkov.Pages
                 else
                 {
                     MessageBox.Show("Введите данные заново!");
+                    GenerateCapctcha();
                 }
             }
             
