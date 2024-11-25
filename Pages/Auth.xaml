@@ -24,7 +24,7 @@
             <TextBlock x:Name="tblCaptcha" Text="Капча"/>
             <TextBox x:Name="tbCaptcha"/>
 
-            <TextBlock x:Name="tbTimer"/>
+            <TextBlock x:Name="tbTimer" Foreground="#FFD40000"/>
             <StackPanel Orientation="Horizontal" Height="80" HorizontalAlignment="Center">
                 <Button x:Name="btnEnterGuest" Margin="5,15,5,5" Content="Войти как гость" Click="btnEnterGuest_Click"/>
                 <Button x:Name="btnEnter" Margin="5,15,5,5" Content="Войти" Click="btnEnter_Click"/>
