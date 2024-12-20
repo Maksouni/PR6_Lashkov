@@ -65,7 +65,8 @@ namespace PR6_Lashkov.Pages
 
         private void ClientPage_Loaded(object sender, RoutedEventArgs e)
         {
-            NavigationService.GoBack();
+            if (isGoingBack)
+                NavigationService.GoBack();
         }
     }
 }
