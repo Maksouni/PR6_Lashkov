@@ -24,11 +24,18 @@ namespace PR6_Lashkov.Models
             context.SaveChanges();
         }
 
-        public static Customers GetCustomerByUserId(int id)
+        public static Customers GetCustomerByUserId(int userId)
         {
             var context = GetContext();
-            var customer = context.Customers.FirstOrDefault(x => x.user_id == id);
+            var customer = context.Customers.FirstOrDefault(x => x.user_id == userId);
             return customer;
+        }
+
+        public static Employees GetEmployeeByUserId(int userId)
+        {
+            var context = GetContext();
+            var employee = context.Employees.FirstOrDefault(x => x.user_id == userId);
+            return employee;
         }
     }
 }

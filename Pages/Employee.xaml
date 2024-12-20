@@ -6,9 +6,10 @@
       xmlns:local="clr-namespace:PR6_Lashkov.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
+      Background="White"
       Title="Employee">
 
     <Grid>
-        <Label Content="EMPLOYEE" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="lblGreeting" Text="Employee" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" />
     </Grid>
 </Page>

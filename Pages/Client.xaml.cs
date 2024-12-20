@@ -50,11 +50,11 @@ namespace PR6_Lashkov.Pages
                     greeting = "Добрый вечер";
                     break;
                 case "ночь":
-                    greeting = "Идём спать";
+                    greeting = "Доброй ночи";
                     break;
             }
 
-            lblGreeting.Text = $"{greeting}, {customer.name}";
+            lblGreeting.Text = $"{greeting},\n{customer.surname} {customer.name} {customer.patronymic}";
         }
 
     }
