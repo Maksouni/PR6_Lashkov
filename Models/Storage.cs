@@ -18,8 +18,8 @@ namespace PR6_Lashkov.Models
         public Storage()
         {
             this.Bottles_Operations = new HashSet<Bottles_Operations>();
+            this.Employees_Storage = new HashSet<Employees_Storage>();
             this.Materials_Operations = new HashSet<Materials_Operations>();
-            this.Employees1 = new HashSet<Employees>();
         }
     
         public int id { get; set; }
@@ -30,8 +30,8 @@ namespace PR6_Lashkov.Models
         public virtual ICollection<Bottles_Operations> Bottles_Operations { get; set; }
         public virtual Employees Employees { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Materials_Operations> Materials_Operations { get; set; }
+        public virtual ICollection<Employees_Storage> Employees_Storage { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Employees> Employees1 { get; set; }
+        public virtual ICollection<Materials_Operations> Materials_Operations { get; set; }
     }
 }

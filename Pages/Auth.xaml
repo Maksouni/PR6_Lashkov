@@ -20,7 +20,7 @@
             <TextBlock Text="Логин"/>
             <TextBox x:Name="tbLogin"/>
             <TextBlock Text="Пароль"/>
-            <TextBox x:Name="tbPassword"/>
+            <PasswordBox x:Name="tbPassword" />
             <TextBlock x:Name="tblCaptcha" Text="Капча"/>
             <TextBox x:Name="tbCaptcha"/>
 

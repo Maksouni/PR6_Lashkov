@@ -25,6 +25,8 @@ namespace PR6_Lashkov.Models
         public string phone { get; set; }
         public string email { get; set; }
         public Nullable<int> user_id { get; set; }
+        public string surname { get; set; }
+        public string patronymic { get; set; }
     
         public virtual Users Users { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

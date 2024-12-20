@@ -31,6 +31,7 @@ namespace PR6_Lashkov.Models
         public virtual DbSet<Drinks> Drinks { get; set; }
         public virtual DbSet<Drinks_Materials> Drinks_Materials { get; set; }
         public virtual DbSet<Employees> Employees { get; set; }
+        public virtual DbSet<Employees_Storage> Employees_Storage { get; set; }
         public virtual DbSet<Employees_Workshop> Employees_Workshop { get; set; }
         public virtual DbSet<Hardware> Hardware { get; set; }
         public virtual DbSet<Hardware_Workshop> Hardware_Workshop { get; set; }

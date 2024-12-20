@@ -65,98 +65,101 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Models\Bottles_Operations.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BottleType.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Customers.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DbHelper.cs" />
-    <Compile Include="Models\Drinks.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Drinks_Materials.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Employees.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Employees_Workshop.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Hardware.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Hardware_Workshop.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Materials.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Materials_Operations.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Measures.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Model1.Context.cs">
+    <Compile Include="Models\DrinkFactoryModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
+      <DependentUpon>DrinkFactoryModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Model1.cs">
+    <Compile Include="Models\DrinkFactoryModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DrinkFactoryModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DrinkFactoryModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Drinks.cs">
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Drinks_Materials.cs">
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Employees.cs">
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Employees_Storage.cs">
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Employees_Workshop.cs">
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Hardware.cs">
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Hardware_Workshop.cs">
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Materials.cs">
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Materials_Operations.cs">
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Measures.cs">
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Operation_Type.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Orders.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Order_Details.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Plans.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Plan_Details.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Positions.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Roles.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Shipments.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Shipment_Details.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Statuses.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Storage.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysdiagrams.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Users.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Workshop.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>DrinkFactoryModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Pages\Admin.xaml.cs">
       <DependentUpon>Admin.xaml</DependentUpon>
@@ -239,19 +242,19 @@
     <Resource Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Models\Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-      <DependentUpon>DrinkFactoryModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DrinkFactoryModel.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="Models\DrinkFactoryModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DrinkFactoryModel.edmx</DependentUpon>
+      <LastGenOutput>DrinkFactoryModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\DrinkFactoryModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DrinkFactoryModel.edmx</DependentUpon>
+      <LastGenOutput>DrinkFactoryModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

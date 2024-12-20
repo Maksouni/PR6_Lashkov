@@ -17,10 +17,10 @@ namespace PR6_Lashkov.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Employees()
         {
+            this.Employees_Storage = new HashSet<Employees_Storage>();
             this.Employees_Workshop = new HashSet<Employees_Workshop>();
             this.Storage = new HashSet<Storage>();
             this.Workshop = new HashSet<Workshop>();
-            this.Storage1 = new HashSet<Storage>();
         }
     
         public int id { get; set; }
@@ -33,6 +33,8 @@ namespace PR6_Lashkov.Models
         public Nullable<int> user_id { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Employees_Storage> Employees_Storage { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Employees_Workshop> Employees_Workshop { get; set; }
         public virtual Positions Positions { get; set; }
         public virtual Users Users { get; set; }
@@ -40,7 +42,5 @@ namespace PR6_Lashkov.Models
         public virtual ICollection<Storage> Storage { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Workshop> Workshop { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Storage> Storage1 { get; set; }
     }
 }

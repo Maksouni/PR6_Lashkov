@@ -58,7 +58,7 @@ namespace PR6_Lashkov.Pages
         {
             click += 1;
             string login = tbLogin.Text.Trim();
-            string password = Hash.HashPassword(tbPassword.Text.Trim());
+            string password = Hash.HashPassword(tbPassword.Password.Trim());
 
             DrinkFactoryEntities db = DbHelper.GetContext();
 
@@ -74,7 +74,7 @@ namespace PR6_Lashkov.Pages
                 {
                     MessageBox.Show("Вы ввели логин или пароль неверно!");
                     GenerateCapctcha();
-                    tbPassword.Text = String.Empty;
+                    tbPassword.Password = String.Empty;
                 }
             }
             else if (click > 1)
@@ -136,7 +136,7 @@ namespace PR6_Lashkov.Pages
             tbCaptcha.Visibility = Visibility.Collapsed;
             tblCaptcha.Visibility = Visibility.Collapsed;
             tbCaptcha.Text = "";
-            tbPassword.Text = "";
+            tbPassword.Password = "";
             tbLogin.Text = "";
 
             switch (user.Roles.name)
