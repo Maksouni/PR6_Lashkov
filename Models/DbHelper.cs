@@ -24,6 +24,13 @@ namespace PR6_Lashkov.Models
             context.SaveChanges();
         }
 
+        public static List<Employees> GetEmployees()
+        {
+            var context = GetContext();
+            var employees = context.Employees.ToList();
+            return employees;
+        }
+
         public static Customers GetCustomerByUserId(int userId)
         {
             var context = GetContext();

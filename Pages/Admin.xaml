@@ -10,6 +10,36 @@
       Title="Admin">
 
     <Grid>
-        <TextBlock x:Name="lblGreeting" Text="Admin" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="206*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="lblGreeting" Text="Admin" HorizontalAlignment="Center" VerticalAlignment="Top" TextAlignment="Center" Grid.Row="0" />
+        <StackPanel Grid.Row="1">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                <ItemsControl ItemsSource="{Binding employees}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="4" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Button Width="150" Height="300" Click="CardButton_Click" CommandParameter="{Binding}" Background="Transparent" BorderBrush="Transparent" Margin="5">
+                                <Border BorderThickness="1" BorderBrush="LightGray" Margin="5" Padding="10">
+                                    <StackPanel HorizontalAlignment="Center">
+                                        <Rectangle Width="100" Height="100" Fill="LightGray" Stroke="Gray" StrokeThickness="1" />
+                                        <!--<TextBlock Text="{Binding Role}" Margin="0,10,0,2" HorizontalAlignment="Center" />-->
+                                        <TextBlock Text="{Binding surname}" Margin="0,2" HorizontalAlignment="Center" />
+                                        <TextBlock Text="{Binding name}" Foreground="Blue" HorizontalAlignment="Center" />
+                                        <TextBlock Text="{Binding Positions.name}" Foreground="Blue" HorizontalAlignment="Center" />
+                                    </StackPanel>
+                                </Border>
+                            </Button>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </StackPanel>
     </Grid>
 </Page>

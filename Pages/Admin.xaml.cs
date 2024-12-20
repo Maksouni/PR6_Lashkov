@@ -2,6 +2,7 @@
 using PR6_Lashkov.Services;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,10 +23,13 @@ namespace PR6_Lashkov.Pages
     /// </summary>
     public partial class Admin : Page
     {
+        public ObservableCollection<Employees> employees { get; set; }
+
         Employees admin;
         public Admin(Users user)
         {
             InitializeComponent();
+
             try
             {
                 admin = DbHelper.GetEmployeeByUserId(user.id);
@@ -55,6 +59,20 @@ namespace PR6_Lashkov.Pages
             }
 
             lblGreeting.Text = $"{greeting},\n{admin.surname} {admin.name} {admin.patronymic}";
+
+            employees = new ObservableCollection<Employees>(DbHelper.GetEmployees());
+
+
+            DataContext = this;
         }
+
+        private void CardButton_Click(object sender, RoutedEventArgs e)
+        {
+            if ((sender as Button)?.CommandParameter is Employees clickedEmployee)
+            {
+                MessageBox.Show($"Кликнуто: {clickedEmployee.surname} ({clickedEmployee.name})");
+            }
+        }
+
     }
 }
