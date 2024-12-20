@@ -17,8 +17,8 @@ namespace PR6_Lashkov.Services
             TimeSpan eveningStart = new TimeSpan(17, 1, 0); // 17:01
             TimeSpan eveningEnd = new TimeSpan(19, 0, 0);   // 19:00
 
-            TimeSpan current = DateTime.Now.TimeOfDay;
-            //TimeSpan current = new TimeSpan(12, 0, 0);
+            //TimeSpan current = DateTime.Now.TimeOfDay;
+            TimeSpan current = new TimeSpan(12, 0, 0);
 
             if (current >= morningStart && current <= morningEnd)
             {

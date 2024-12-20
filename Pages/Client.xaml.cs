@@ -22,20 +22,13 @@ namespace PR6_Lashkov.Pages
     /// </summary>
     public partial class Client : Page
     {
+        bool isGoingBack;
         Customers customer;
         public Client(Users user)
         {
             InitializeComponent();
-            try
-            {
-                customer = DbHelper.GetCustomerByUserId(user.id);
-            }
-            catch
-            {
-                MessageBox.Show("Ошибка", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                this.NavigationService.GoBack();
-            }
-
+            isGoingBack = false;
+            Loaded += ClientPage_Loaded;
             string timeInterval = TimeGetter.GetTimeInterval();
             string greeting = "";
             switch (timeInterval)
@@ -53,9 +46,26 @@ namespace PR6_Lashkov.Pages
                     greeting = "Доброй ночи";
                     break;
             }
-
-            lblGreeting.Text = $"{greeting},\n{customer.surname} {customer.name} {customer.patronymic}";
+            if (user != null)
+            {
+                try
+                {
+                    customer = DbHelper.GetCustomerByUserId(user.id);
+                }
+                catch
+                {
+                    MessageBox.Show("Ошибка", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    isGoingBack = true;
+                }
+                lblGreeting.Text = $"{greeting},\n{customer.surname} {customer.name} {customer.patronymic}";
+            }
+            else
+                lblGreeting.Text = $"{greeting}, Гость";
         }
 
+        private void ClientPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
     }
 }

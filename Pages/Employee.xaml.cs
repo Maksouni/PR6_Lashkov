@@ -22,10 +22,13 @@ namespace PR6_Lashkov.Pages
     /// </summary>
     public partial class Employee : Page
     {
+        bool isGoingBack;
         Employees employee;
         public Employee(Users user)
         {
             InitializeComponent();
+            isGoingBack = false;
+            Loaded += EmployeePage_Loaded;
             try
             {
                 employee = DbHelper.GetEmployeeByUserId(user.id);
@@ -33,7 +36,7 @@ namespace PR6_Lashkov.Pages
             catch
             {
                 MessageBox.Show("Ошибка", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                this.NavigationService.GoBack();
+                isGoingBack = true;
             }
 
             string timeInterval = TimeGetter.GetTimeInterval();
@@ -50,11 +53,17 @@ namespace PR6_Lashkov.Pages
                     greeting = "Добрый вечер";
                     break;
                 case "ночь":
-                    greeting = "Доброй ночи";
+                    MessageBox.Show("Доступ запрещён в нерабочее время", "Доступ запрещён", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    isGoingBack = true;
                     break;
             }
 
             lblGreeting.Text = $"{greeting},\n{employee.surname} {employee.name} {employee.patronymic}";
+        }
+
+        private void EmployeePage_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (isGoingBack) NavigationService.GoBack();
         }
     }
 }
