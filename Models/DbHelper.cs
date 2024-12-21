@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,6 +44,13 @@ namespace PR6_Lashkov.Models
             var context = GetContext();
             var employee = context.Employees.FirstOrDefault(x => x.user_id == userId);
             return employee;
+        }
+
+        public static List<Positions> GetPositions()
+        {
+            var context = GetContext();
+            var positions = context.Positions.ToList();
+            return positions;
         }
     }
 }

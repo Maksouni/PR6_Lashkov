@@ -70,7 +70,7 @@ namespace PR6_Lashkov.Pages
         {
             if ((sender as Button)?.CommandParameter is Employees clickedEmployee)
             {
-                MessageBox.Show($"Кликнуто: {clickedEmployee.surname} ({clickedEmployee.name})");
+                NavigationService.Navigate(new EmployeeEdit(clickedEmployee));
             }
         }
 
