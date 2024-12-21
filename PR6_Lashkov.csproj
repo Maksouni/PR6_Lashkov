@@ -167,6 +167,9 @@
     <Compile Include="Pages\Employee.xaml.cs">
       <DependentUpon>Employee.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\EmployeeEdit.xaml.cs">
+      <DependentUpon>EmployeeEdit.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Services\CaptchaGenerator.cs" />
     <Compile Include="Services\Hash.cs" />
     <Compile Include="Services\TimeGetter.cs" />
@@ -195,6 +198,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Employee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\EmployeeEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
